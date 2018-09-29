@@ -41,7 +41,7 @@ module.exports = "body {\n    background-color: black;\n    color: whitesmoke\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"460\" alt=\"Angular Logo\" src=\"assets/Images/OwlWhite.jpeg\">\n</div>\n<h2 class=\"center\">Comming soon</h2>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"460\" alt=\"Angular Logo\" src=\"./assets/Images/OwlWhite.jpeg\">\n</div>\n<h2 class=\"center\">Comming soon</h2>\n"
 
 /***/ }),
 
