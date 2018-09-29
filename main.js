@@ -41,7 +41,7 @@ module.exports = "body {\n    background-color: black;\n    color: whitesmoke\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"460\" alt=\"Angular Logo\" src=\"./assets/Images/OwlWhite.jpeg\">\n</div>\n<h2 class=\"center\">Comming soon</h2>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"center container\">\n  <h1 (click)=\"move()\">\n    Welcome to {{ title }}!\n  </h1>\n  <div width=\"width\">\n    <img id=\"logo\" width=\"200\" alt=\"Angular Logo\" src=\"./assets/Images/OwlWhite.jpeg\"\n    (click)=\"move($event)\">\n  </div>\n</div>\n<h2 class=\"center\">Comming soon</h2>\n"
 
 /***/ }),
 
@@ -62,17 +62,39 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'owldevs';
+        this.title = 'Owl Devs';
+        this.width = 200;
+        this.touch = false;
+        this.width = 200;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        console.log(document.getElementById('logo'));
+        this.width = document.getElementById('logo').clientWidth;
+    };
+    AppComponent.prototype.move = function () {
+        if (this.touch) {
+            this.width += 50;
+            this.touch = !this.touch;
+        }
+        else {
+            this.width -= 50;
+            this.touch = !this.touch;
+        }
+        console.log("Event fired!");
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());
@@ -139,7 +161,8 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    baseRef: "/"
 };
 /*
  * For easier debugging in development mode, you can import the following file
