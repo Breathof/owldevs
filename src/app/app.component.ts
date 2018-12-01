@@ -10,11 +10,11 @@ export class AppComponent implements OnInit {
   public touch = false;
   
   constructor() {
-    this.width = 200;
+    // this.width = 200;
   }
 
   ngOnInit(): void {
-    this.width = document.getElementById('logo').clientWidth;
+    // this.width = document.getElementById('logo').clientWidth;
   }
 
 }
