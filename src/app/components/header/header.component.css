@@ -1,0 +1,10 @@
+.nav {
+    border-bottom: 2px white solid;
+    color: #DDD;
+    margin-bottom: 0;
+}
+.nav a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: inherit; 
+}

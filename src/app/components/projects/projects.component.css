@@ -1,0 +1,15 @@
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.img-responsive {
+    max-width: 50% !important;
+ }

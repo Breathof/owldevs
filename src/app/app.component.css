@@ -1,8 +1,12 @@
 body {
     background-color: black;
-    color: whitesmoke
+    color: whitesmoke;
 }
 
 .center {
     text-align: center;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
 }
