@@ -1,9 +1,16 @@
 @font-face{
     font-family: 'Terminus';
-    src: url('/src/assets/Fonts/TerminusTTF.ttf')
+    src: url("/assets/Fonts/TerminusTTF.ttf")
 }
 
 body {
     background-color: black;
     color: whitesmoke;
-}
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }

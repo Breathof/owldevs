@@ -1,0 +1,28 @@
+<div *ngFor="let post of posts">
+  <div *ngIf="!post.visible" class="col s12 m7">
+    <div class="card horizontal">
+      <div class="card-image black">
+        <img src="{{post.imageSource}}" width="100%">
+      </div>
+      <div class="card-stacked black">
+        <div class="card-content">
+          <p class="black">A polyfill is a browser fallback, made in JavaScript,
+            that allows functionality you expect to work in modern browsers to work
+            in older browsers, e.g., to support canvas (an HTML5 feature) in older browsers.
+          </p>
+          <p class="black">
+            An example is sessionStorage is available in all the latest browsers (IE8 and upwards) but isn't in IE7 and
+            below.
+            A polyfill can be used to plug the support for older browsers that don't provide sessionStorage.
+          </p>
+        </div>
+        <div class="card-action">
+          <a (click)="showContent(post)">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="post.visible" [innerHTML]="post.rawHtml">
+  </div>
+</div>
